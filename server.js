@@ -10,10 +10,6 @@ db.connect(err => {
     promptUser();
 });
 
-// const userOptions = ['See all employees', 'See all roles', 'See all departments',
-//     'Add employee', 'Add dept', 'Add new role', 'Update employee role']
-
-
 const promptUser = () => {
 
     inquirer.prompt([
@@ -22,7 +18,7 @@ const promptUser = () => {
             name: 'selection',
             message: 'Please select an option below:',
             choices: ['See all employees', 'See all roles', 'See all departments',
-            'Add employee', 'Add dept', 'Add new role', 'Update employee role'],
+            'Add employee', 'Add dept', 'Add new role'],
             default: 0
         },
     ]).then(selectionData => {
